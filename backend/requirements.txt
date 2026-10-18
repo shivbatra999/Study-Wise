@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pdfplumber
+python-pptx
+chromadb
+sentence-transformers
+requests
+pydantic
+langchain-text-splitters
+python-multipart
