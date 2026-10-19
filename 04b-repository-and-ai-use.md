@@ -16,4 +16,4 @@ Folders: /docs/elicitation for interview notes and survey results, /docs/benchma
 
 | Tool | What it was used for | Who used it | How the output was checked |
 |---|---|---|---|
-| Claude (Anthropic) | Drafting first versions of P1 sections and the two diagrams from our README and the P1 template; checking requirement wording against the template rules | Lokesh, Nandhan | Each section owner reviewed and rewrote their section; every requirement was checked by hand against the Chapter 5 testability rule (single "shall", measurable, stated check); assumptions and unsourced claims were marked or removed. |
+| Claude (Anthropic) | We utilized AI as a reference tool to accelerate our understanding of the project guidelines and brainstorm preliminary structural layouts. Specifically, AI helped map the template criteria against our project scope and conceptual suggestions for structuring the two diagrams. | Lokesh, Nandhan | Every requirement was checked by hand against the Chapter 5 testability rule (single "shall", measurable, stated check); assumptions and unsourced claims were marked or removed. |
