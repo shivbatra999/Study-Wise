@@ -1,0 +1,19 @@
+## 3.a Functional Requirements
+
+| ID | Requirement — one “shall” sentence | Priority | Source | Acceptance criterion |
+| :--- | :--- | :--- | :--- | :--- |
+| FR-01 | The system shall import a PDF file selected by the student into a course the student chooses. | MUST | SH1, R7 | Import a 30-page text PDF into course "CS 3354"; the file appears in that course's material list with 30 pages. |
+| FR-02 | The system shall import a PowerPoint (.pptx) file selected by the student into a course the student chooses. | MUST | SH1, R7 | Import a 40-slide .pptx; the file appears in the course's material list with 40 slides. |
+| FR-03 | The system shall reject an imported file that contains no extractable text with a message naming that file. | SHOULD | A3 | Import an image-only scanned PDF; a message names the file and says no text was found; the file is not listed. |
+| FR-04 | The system shall let the student create a course with a name of their choice. | MUST | SH1 | Create course "CS 4349"; it appears in the course list. |
+| FR-05 | The system shall keep courses and imported materials available after the application is closed and reopened. | MUST | SH1 | Import a file, close and reopen the application; the file is listed and questions about it are answered without re-importing. |
+| FR-06 | The system shall remove a material the student selects so that it is no longer used in answers or quizzes. | SHOULD | SH1 | Remove file X, then ask a question answered only in X; the system reports that no relevant material was found (FR-09). |
+| FR-07 | The system shall answer a typed question using only passages from the materials of the course the student selected. | MUST | SH1, R7 | For each of the 20 benchmark questions, every cited source belongs to the selected course. |
+| FR-08 | The system shall display with every answer the file name and page or slide number of each passage used. | MUST | SH1 | All 20 benchmark answers show at least one citation; opening each cited page shows the quoted passage. |
+| FR-09 | The system shall state that no relevant material was found, instead of answering, when no passage in the selected course matches the question. | MUST | SH1, SH3 | Ask 5 off-topic questions (e.g. "Who won the 2022 World Cup?") in a CS 3354 course; all 5 return the no-material message. |
+| FR-10 | The system shall generate a multiple-choice practice quiz of between 1 and 20 questions, as the student chooses, from a selected course. | MUST | SH1, R7 | Request 10 questions; 10 questions appear, each with 4 options of which exactly one is marked correct. |
+| FR-11 | The system shall generate short-answer practice questions with a model answer when the student chooses that format. | COULD | R7 | Request 5 short-answer questions; 5 questions appear, each with a model answer and a citation. |
+| FR-12 | The system shall limit quiz questions to the materials the student selects within a course. | SHOULD | SH1 | Select only "Lecture 5.pdf"; every generated question cites Lecture 5.pdf. |
+| FR-13 | The system shall report the number of correct answers out of the total when the student submits a multiple-choice quiz. | MUST | SH1 | Answer a 10-question quiz with 7 known-correct choices; the system reports 7 / 10. |
+| FR-14 | The system shall show for each submitted quiz question the correct answer with its source file and page or slide number. | MUST | SH1 | Submit a quiz; every question shows the correct option plus a citation that opens to the supporting passage. |
+| FR-15 | The system shall tell the student, with steps to fix it, when the local LLM runtime is not running or has no model installed. | MUST | SH1, A2 | Stop the runtime, then ask a question; a message says the runtime is not running and lists the steps to start it. |
