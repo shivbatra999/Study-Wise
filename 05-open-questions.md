@@ -12,4 +12,4 @@ Every question is carried into P2 with its resolution, or with a note that it is
 | Q5 | Should Study-Wise download the language model during first-time setup, or should the student install the runtime and model themselves? | Non-technical students, through two setup trials run by Lavanya Bansal; final decision by the team under change control | 5 Nov | The student installs the runtime separately, guided by setup instructions (UC-06). |
 | Q6 | Should short-answer responses be marked by the system, and if so, against what standard? | Target students (interviews, Lavanya Bansal) and the CS 3354 instructor (Shivansh Batra asks with Q3) | 1 Nov | Not marked; a model answer with citation is shown (UC-03 3b). |
 
-    
+        
