@@ -1,13 +1,12 @@
 # 4 Use-Case Analysis
 
-Owner: Lokesh Reddy Penugonda
 
 ## 4.1 Use cases selected for analysis
 
 | Use case | Name | Why it was selected | Non-trivial steps |
 |---|---|---|---|
 | UC-02 | Ask a Question About Course Materials | Carries most of the product's value; touches the most quality requirements (QR-01, QR-03, CON-01); depends on an external system whose failure the student can see. Specified in full at P1. | (4) |
-| UC-03 | Practice with a Generated Quiz | Second core goal; QR-04 (quiz quality) is the requirement we are least sure a small local model can meet (R2). Specified in full at P1. | (6), (10) |
+| UC-03 | Practice with a Generated Quiz | Second core goal; QR-04 (quiz quality) is the requirement we are least sure a small local model can meet (R2). Specified in full at P1. | (6), (8), (10) |
 | UC-01 | Import Course Materials | Every other use case depends on it; realizes five MUST/SHOULD requirements (FR-01 to FR-05) and QR-02; involves an external system (the student's file system) and a failure the student can see (FR-03). | (4), (6) |
 
 UC-06 Set Up Study-Wise for First Use was considered but not analyzed: how the model is obtained during setup is still open (Q5), and expanding it now would mean inventing the answer. See 9.2.
@@ -52,8 +51,8 @@ UC-06 Set Up Study-Wise for First Use was considered but not analyzed: how the m
 | TUCBW | The student chooses to start a practice quiz in one of their courses. |
 | TUCEW | The student sees their score and, for every question, the correct answer with its source. |
 | Preconditions | Study-Wise is installed on the student's device. |
-| Postconditions | The student has seen a score (correct out of total) and, for every question, the correct option with its material name and page or slide number. No material, question or answer has left the device. The course's materials are unchanged. |
-| Traces to requirements | FR-10, FR-11, FR-12, FR-13, FR-14, FR-15, QR-04, CON-01 |
+| Postconditions | The student has seen a score (correct out of total) and, for every question, the correct option with its material name and page or slide number. The quiz and its score are kept for later review (FR-17). No material, question or answer has left the device. The course's materials are unchanged. |
+| Traces to requirements | FR-10, FR-11, FR-12, FR-13, FR-14, FR-15, FR-17, QR-04, CON-01 |
 
 | Actor input / action | System response |
 |---|---|
@@ -87,7 +86,7 @@ UC-06 Set Up Study-Wise for First Use was considered but not analyzed: how the m
 | TUCEW | The student sees each imported material listed in the course with its number of pages or slides and marked ready for questions. |
 | Preconditions | Study-Wise is installed on the student's device. |
 | Postconditions | Each imported material is listed in the course with its page or slide count and can be used by UC-02 and UC-03, including after Study-Wise is closed and reopened. The student's original files are unchanged. Nothing has left the device. |
-| Traces to requirements | FR-01, FR-02, FR-03, FR-04, FR-05, QR-02, QR-05, CON-01 |
+| Traces to requirements | FR-01, FR-02, FR-03, FR-04, FR-05, FR-16, FR-18, QR-02, QR-05, CON-01 |
 
 | Actor input / action | System response |
 |---|---|
@@ -102,7 +101,7 @@ UC-06 Set Up Study-Wise for First Use was considered but not analyzed: how the m
 | A1 | (0) or (1) | The student has no course for these materials. | The system asks for a course name; the student enters one; the system shows the new, empty course (FR-04). | Rejoins (2) |
 | A2 | (5) | A selected file contains no text that can be extracted. | The system names the file, says no text was found, and does not list it (FR-03). Other selected files continue. | Rejoins (6) |
 | A3 | (5) | A selected file cannot be opened (damaged or password-protected). | The system names the file and says it could not be opened; the file is not listed. Other files continue. (No requirement yet; see 4.3.) | Rejoins (6) |
-| A4 | (5) | A selected file is already in the course. | Behavior undecided (Q8). Assumed meanwhile: the system says the file is already there and does not add it again. | Rejoins (6) |
+| A4 | (5) | A selected file has the same name as a material already in the course. | The system says the file is already in the course and asks whether to replace it. On yes, the old material is replaced; on no, the file is skipped (FR-18; students' answer to Q8). | Rejoins (6) |
 | A5 | (5) | The student cancels without selecting a file. | The system shows the course's materials unchanged. | Ends |
 
 ## 4.3 Self-review log
@@ -118,7 +117,7 @@ Each expanded use case was run against the ten questions of the Lesson 13 review
 | UC-03 | 3. (as above) | P1 step 6, "answers every question and submits the quiz," merged two actor actions. | Split into (7)/(8) and (9)/(10). |
 | UC-02 | 5. Does it end with an acknowledgment the actor can perceive? | P1 ended with "reads the answer and, optionally, opens a cited source," which mixed the acknowledgment with an optional action. | Main flow ends at (5), the student reading the cited answer; opening a source became A7. |
 | UC-01 | 8. Is every alternate named by the step it branches from? Does each trace to a requirement? | A3 (file cannot be opened) has no requirement behind it. | Proposed FR-16 through change control (0.2). |
-| UC-01 | 8. (as above) | A4 (file already in course): the right behavior is a choice for users, not for us. | Recorded as open question Q8 instead of inventing an answer. |
-| UC-03 | 7. Is there a post-condition a tester could turn into a test? | Whether a finished quiz and its score are kept is not stated anywhere. | Post-condition limited to what the student has seen; retention recorded as open question Q7. |
+| UC-01 | 8. (as above) | A4 (file already in course): the right behavior is a choice for users, not for us. | Recorded as open question Q8 instead of inventing an answer. Q8 was later answered by interviews; A4 now follows FR-18 (CH-21). |
+| UC-03 | 7. Is there a post-condition a tester could turn into a test? | Whether a finished quiz and its score are kept is not stated anywhere. | Post-condition limited to what the student has seen; retention recorded as open question Q7. Q7 was later answered by interviews, and the postcondition now includes FR-17 (CH-20). |
 | All three | 1, 9, 10 | None found. The actor is the role Student; nothing happens that the student neither sees nor waits for (importing in UC-01 is waited for, per QR-02); external systems are named by role, not product, and no screen widgets or stores are named. | — |
 | All three | 4. Does every item the actor supplies exist as a domain model attribute? | Checked against the domain model in 5.3 (K1). | See 5.3. |

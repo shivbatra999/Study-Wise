@@ -1,0 +1,15 @@
+sequenceDiagram
+  title Analysis sequence diagram - UC-02 Ask a Question About Course Materials (main scenario)
+  actor S as Student
+  participant QH as QuestionHandler
+  participant PF as PassageFinder
+  participant LR as Local LLM runtime (external)
+  participant A as Answer
+  S->>+QH: 3 submits a question (question text)
+  QH->>+PF: 4a asks for the passages in the course most relevant to the question
+  PF-->>-QH: relevant passages
+  QH->>QH: 4b checks that at least one passage is relevant
+  QH->>+LR: 4c asks for an answer built only from those passages
+  LR-->>-QH: generated text
+  QH->>A: 4d records the answer with a citation for each passage used
+  QH->>-S: 4e shows the answer with its citations

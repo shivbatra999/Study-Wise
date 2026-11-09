@@ -31,3 +31,14 @@ source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 
 # Install required Python packages
 pip install -r backend/requirements.txt
+
+## Course deliverables (CS 3354)
+
+| Milestone | Where |
+|---|---|
+| P1 Requirements (v0.6) | Section files `00-…` to `06-…` in the repository root; diagrams in `docs/p1/diagrams` |
+| P2 Analysis and High-Level Design (v1.0) | `docs/p2/` (section files and `Study-Wise_P2_v1.0.pdf`); diagrams in `docs/p2/diagrams`; tag `p2` |
+| Benchmark set | `docs/benchmark` |
+| Elicitation (survey, interviews) | `docs/elicitation` |
+| Spike S-01 | `spikes/S-01` |
+| AI use log | `data/ai-use-log.md` |

@@ -1,0 +1,25 @@
+sequenceDiagram
+  title Analysis sequence diagram - UC-03 Practice with a Generated Quiz (main scenario)
+  actor S as Student
+  participant QM as QuizMaster
+  participant PF as PassageFinder
+  participant LR as Local LLM runtime (external)
+  participant Z as Quiz
+  participant O as Option
+  participant R as QuizResult
+  S->>+QM: 5 chooses multiple choice and a number of questions
+  QM->>QM: 6a checks the number is between 1 and 20
+  QM->>+PF: 6b asks for passages from the chosen materials
+  PF-->>-QM: passages
+  QM->>+LR: 6c asks for that many questions, each with four options and one correct, from the passages
+  LR-->>-QM: generated questions
+  QM->>QM: 6d checks each question has exactly one correct option and a source passage
+  QM->>Z: 6e records the questions with their options and citations
+  QM->>S: 6f shows the questions with their options
+  S->>QM: 7 chooses an option for a question
+  QM->>O: 8 records the option as chosen
+  S->>QM: 9 submits the quiz
+  QM->>+Z: 10a asks how many chosen options are correct
+  Z-->>-QM: number correct
+  QM->>R: 10b records the number correct and the total
+  QM->>-S: 10c shows the score and each correct option with its source

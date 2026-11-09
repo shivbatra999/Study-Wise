@@ -1,0 +1,32 @@
+digraph deployment {
+  rankdir=LR; fontname="Helvetica"; nodesep=0.7; ranksep=1.6;
+  node [fontname="Helvetica", fontsize=11, shape=note, style=filled, fillcolor="#fffbe6"];
+  edge [fontname="Helvetica", fontsize=10, color="#c62828", fontcolor="#c62828"];
+  subgraph cluster_laptop {
+    label="<<device>> Student laptop - Windows 11 or macOS 14+, 8 GB or more RAM, no discrete GPU"; labeljust=l; style="rounded,bold"; color="#333333"; fontsize=12;
+    subgraph cluster_zb {
+      label="TRUST ZONE B - our code, untrusted input"; style="dashed,bold"; color="#b26a00"; fontcolor="#b26a00";
+      subgraph cluster_browser { label="<<executionEnvironment>>\nWeb browser"; style=rounded; color="#1f4e8c"; fontcolor="#1f4e8c";
+        ui [label="<<artifact>>\nstudy-ui\n(static HTML/JS bundle)\ndeploys: StudyUI"]; }
+    }
+    subgraph cluster_za {
+      label="TRUST ZONE A - our code and data (trusted)"; style="dashed,bold"; color="#2e7d32"; fontcolor="#2e7d32";
+      subgraph cluster_py { label="<<executionEnvironment>>\nPython 3.10 process"; style=rounded; color="#1f4e8c"; fontcolor="#1f4e8c";
+        be [label="<<artifact>>\nstudywise-backend\ndeploys: LocalApi, MaterialIngestor,\nAnswerService, QuizService,\nCourseLibrary, PassageIndex,\nLocalStore, RuntimeGateway"];
+        db [label="<<artifact>>\nstudywise.db\n(SQLite file in the app data folder)"]; }
+    }
+    subgraph cluster_zc {
+      label="TRUST ZONE C - third party, not trusted"; style="dashed,bold"; color="#6a1b9a"; fontcolor="#6a1b9a";
+      subgraph cluster_ollama { label="<<executionEnvironment>>\nOllama runtime (installed by the student)"; style=rounded; color="#555555";
+        model [label="<<artifact>>\nopen-weight model files\nanswer: llama3.2:3b (default, ADR-04)\nembedding: nomic-embed-text"]; }
+      subgraph cluster_files { label="<<executionEnvironment>>\nOperating-system file system"; style=rounded; color="#555555";
+        files [label="<<artifact>>\nstudent's PDF and PPTX files"]; }
+    }
+  }
+  net [shape=box, style="dashed", fillcolor=white, color="#999999", fontcolor="#555555", label="Internet / cloud services\nno communication path (CON-01)"];
+  ui -> be [xlabel="HTTP, loopback\n127.0.0.1 only", dir=both];
+  be -> model [xlabel="HTTP, loopback\n127.0.0.1:11434", dir=both];
+  be -> files [xlabel="OS file read\n(read only)"];
+  be -> db [xlabel="local file I/O", color="#333333", fontcolor="#333333", arrowhead=none];
+  files -> net [style=invis];
+}

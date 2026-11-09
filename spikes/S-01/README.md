@@ -61,7 +61,7 @@ QR-03 must be scored by two team members against `benchmark.csv`, with a third r
 ## How to reproduce
 
 ```bash
-cd spike-01
+cd spikes/S-01
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ollama pull nomic-embed-text && ollama pull llama3.2:3b
 .venv/bin/python -u run_benchmark.py --decks <folder with the two SEKER_*.pdf decks> \
