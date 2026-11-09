@@ -1,0 +1,17 @@
+{
+  "model": "llama3.2:3b",
+  "embed_model": "nomic-embed-text",
+  "machine": "Mac15,12 Apple M3 8 GB, macOS 26.0.1",
+  "pages_indexed": 71,
+  "index_seconds": 23.7,
+  "cold_start_seconds": 6.8,
+  "top_k": 3,
+  "threshold": 0.55,
+  "median_seconds": 7.01,
+  "p18_seconds": 16.35,
+  "max_seconds": 40.59,
+  "under_20s": "18/20",
+  "qr01_pass": true,
+  "expected_page_retrieved": "17/20",
+  "off_topic_refused": "5/5"
+}

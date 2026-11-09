@@ -1,0 +1,95 @@
+id,kind,seconds,best_score,expected,retrieved,check_passed,eval_tokens,answer
+B01,benchmark,7.35,0.798,SEKER_L13_L14_Use_Case_Analysis.pdf p.5,SEKER_L13_L14_Use_Case_Analysis.pdf p.5; SEKER_L13_L14_Use_Case_Analysis.pdf p.1; SEKER_L13_L14_Use_Case_Analysis.pdf p.2,True,145,"The three levels of specification for a use case are: 
+1. Level 1: High-level, for the stakeholder, written as a two-clause statement (e.g. ""TUCBW"" or ""TUCEW""). 
+2. Level 2: For the builder, written as a two-column table, turn by turn. 
+3. Level 3: For the developer, written as a verb phrase and nothing else.
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.5]
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.2]
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.1]"
+B02,benchmark,3.28,0.712,SEKER_L13_L14_Use_Case_Analysis.pdf p.6,SEKER_L13_L14_Use_Case_Analysis.pdf p.18; SEKER_L13_L14_Use_Case_Analysis.pdf p.1; SEKER_L13_L14_Use_Case_Analysis.pdf p.17,False,32,Step (0) describes what the actor finds before touching anything. [SEKER_L13_L14_Use_Case_Analysis.pdf p.17]
+B03,benchmark,4.72,0.755,SEKER_L13_L14_Use_Case_Analysis.pdf p.8,SEKER_L13_L14_Use_Case_Analysis.pdf p.8; SEKER_L13_L14_Use_Case_Analysis.pdf p.9; SEKER_L13_L14_Use_Case_Analysis.pdf p.11,True,51,"The test that decides whether something is a pre-condition or an alternate flow is question 6: ""Is there a pre-condition that is really an alternate flow?"" [SEKER_L13_L14_Use_Case_Analysis.pdf p.8]."
+B04,benchmark,5.46,0.605,SEKER_L13_L14_Use_Case_Analysis.pdf p.9,SEKER_L13_L14_Use_Case_Analysis.pdf p.17; SEKER_L13_L14_Use_Case_Analysis.pdf p.5; SEKER_L13_L14_Use_Case_Analysis.pdf p.20,False,90,"TUCBW stands for ""The User Can Begin Work"". It is used to describe the level of abstraction in a use case, indicating that the user can start the process. [SEKER_L13_L14_Use_Case_Analysis.pdf p.5]
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.5]
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.2]"
+B05,benchmark,9.39,0.746,SEKER_L13_L14_Use_Case_Analysis.pdf p.14,SEKER_L13_L14_Use_Case_Analysis.pdf p.14; SEKER_L15_L16_High_Level_Design.pdf p.23; SEKER_L13_L14_Use_Case_Analysis.pdf p.24,True,209,"Correctness scored the lowest with a mean score of 3.22. [SEKER_L13_L14_Use_Case_Analysis.pdf p.14]
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.14]
+A I A N D A N A L Y S I S · 1 The Notation Is Solved. The Content Is Not. 14 / 33 Şadi Evren ŞEKER ( Dr. Seeker) Ferrari, Abualhaija and Arora (2024) asked a large language model to produce UML sequence diagrams from natural-language requirements: 28 requirements documents, 18 domains, 87 generated diagrams, each scored 1–5 by two researchers. Adherence to the standard 4.54 Terminological alignment 4.49 Understandability 4.37 Completeness 3.63 Correctness 3.22 neutral = 3 Correctness was the ONLY criterion not significantly above the neutral midpoint (p ≈ 0.10)."
+B06,benchmark,4.91,0.746,SEKER_L13_L14_Use_Case_Analysis.pdf p.15,SEKER_L13_L14_Use_Case_Analysis.pdf p.15; SEKER_L13_L14_Use_Case_Analysis.pdf p.14; SEKER_L13_L14_Use_Case_Analysis.pdf p.16,True,65,"According to Cheng et al. (2026), LLMs recovered attributes in class diagrams under 4.5% of the time. [SEKER_L13_L14_Use_Case_Analysis.pdf p.15]
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.15]"
+B07,benchmark,7.26,0.833,SEKER_L13_L14_Use_Case_Analysis.pdf p.13,SEKER_L13_L14_Use_Case_Analysis.pdf p.13; SEKER_L15_L16_High_Level_Design.pdf p.21; SEKER_L15_L16_High_Level_Design.pdf p.10,True,81,"Hertz sued Accenture for more than $32 million in fees already paid, and the suit was filed in 2019. [SEKER_L13_L14_Use_Case_Analysis.pdf p.13]
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.13]
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.13]"
+B08,benchmark,3.99,0.734,SEKER_L13_L14_Use_Case_Analysis.pdf p.21,SEKER_L13_L14_Use_Case_Analysis.pdf p.18; SEKER_L13_L14_Use_Case_Analysis.pdf p.21; SEKER_L13_L14_Use_Case_Analysis.pdf p.14,True,81,"The four translation cases are: CASE A (Subject is an ACTOR), CASE B (Object acts upon an ACTOR), CASE C (Object acts upon an OBJECT), and CASE D (Object acts upon ITSELF). [SEKER_L13_L14_Use_Case_Analysis.pdf p.21]
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.21]"
+B09,benchmark,4.52,0.73,SEKER_L13_L14_Use_Case_Analysis.pdf p.11,SEKER_L13_L14_Use_Case_Analysis.pdf p.2; SEKER_L13_L14_Use_Case_Analysis.pdf p.4; SEKER_L13_L14_Use_Case_Analysis.pdf p.11,True,55,Questions 9 and 10 on the Lesson 13 review checklist separate analysis from design. [SEKER_L13_L14_Use_Case_Analysis.pdf p.11] [SEKER_L13_L14_Use_Case_Analysis.pdf p.11]
+B10,benchmark,4.68,0.708,SEKER_L13_L14_Use_Case_Analysis.pdf p.24,SEKER_L13_L14_Use_Case_Analysis.pdf p.23; SEKER_L13_L14_Use_Case_Analysis.pdf p.24; SEKER_L13_L14_Use_Case_Analysis.pdf p.19,True,47,"Return messages should be dashed and unnumbered. [SEKER_L13_L14_Use_Case_Analysis.pdf p.24]
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.24]"
+B11,benchmark,5.27,0.721,SEKER_L15_L16_High_Level_Design.pdf p.6,SEKER_L15_L16_High_Level_Design.pdf p.6; SEKER_L15_L16_High_Level_Design.pdf p.5; SEKER_L15_L16_High_Level_Design.pdf p.7,True,57,"The four parts of a quality-attribute scenario are: Stimulus, Artifact, Response, and Response Measure. [SEKER_L15_L16_High_Level_Design.pdf p.6]
+
+[SEKER_L15_L16_High_Level_Design.pdf p.5]"
+B12,benchmark,7.83,0.697,SEKER_L15_L16_High_Level_Design.pdf p.8,SEKER_L15_L16_High_Level_Design.pdf p.5; SEKER_L15_L16_High_Level_Design.pdf p.12; SEKER_L15_L16_High_Level_Design.pdf p.18,False,123,"Low coupling is the worst, followed by high cohesion, then low coupling is listed as a principle but not as a level of coupling, however, high cohesion is listed as a principle that serves both high and low coupling. The actual levels of coupling are not explicitly listed in the passages, but high coupling is listed as a principle that serves low coupling. 
+
+[SEKER_L15_L16_High_Level_Design.pdf p.12]
+[SEKER_L15_L16_High_Level_Design.pdf p.5]
+[SEKER_L15_L16_High_Level_Design.pdf p.12]"
+B13,benchmark,7.01,0.725,SEKER_L15_L16_High_Level_Design.pdf p.10,SEKER_L15_L16_High_Level_Design.pdf p.10; SEKER_L15_L16_High_Level_Design.pdf p.5; SEKER_L15_L16_High_Level_Design.pdf p.21,True,68,"62% of all defect-fixing work fell on the tightly coupled ""core"" files, which were only 25.8% of the files in the system. [SEKER_L15_L16_High_Level_Design.pdf p.10]
+
+[SEKER_L15_L16_High_Level_Design.pdf p.5]"
+B14,benchmark,10.86,0.677,SEKER_L15_L16_High_Level_Design.pdf p.13,SEKER_L15_L16_High_Level_Design.pdf p.13; SEKER_L15_L16_High_Level_Design.pdf p.31; SEKER_L15_L16_High_Level_Design.pdf p.32,True,123,"The four views of the 4+1 model are: 
+1. Architectural view (One System, Four Pictures) - showing the system as a single box with everything it touches around it.
+2. Logical view (Component diagram) - showing the components and their responsibilities.
+3. Physical view (Deployment diagram) - showing the nodes, communication paths, and protocols.
+4. Development view (Repository layout) - showing the organization of the source code.
+
+The +1 represents the scenario or use case, which is a walkthrough of the four views together to prove that they are pictures of the same system."
+B15,benchmark,12.56,0.831,SEKER_L15_L16_High_Level_Design.pdf p.15,SEKER_L15_L16_High_Level_Design.pdf p.15; SEKER_L15_L16_High_Level_Design.pdf p.5; SEKER_L13_L14_Use_Case_Analysis.pdf p.6,True,104,"A trust boundary says what you believe, while a system boundary says what you build. Crossing a trust boundary costs you a check, whereas crossing a system boundary costs you a decision: build, buy, or call.
+
+[SEKER_L15_L16_High_Level_Design.pdf p.15]
+[TWO BOUNDARIES THAT ARE NOT THE SAME BOUNDARY]
+[SEKER_L15_L16_High_Level_Design.pdf p.15]
+[SYSTEM BOUNDARY TRUST BOUNDARY]"
+B16,benchmark,12.15,0.741,SEKER_L15_L16_High_Level_Design.pdf p.16,SEKER_L15_L16_High_Level_Design.pdf p.16; SEKER_L15_L16_High_Level_Design.pdf p.31; SEKER_L15_L16_High_Level_Design.pdf p.18,True,59,"A layer may call the layer below it and nothing else. No arrow points upward, and no arrow skips a layer. Break either and you have a drawing labelled “layered”, not a layered architecture.
+
+[SEKER_L15_L16_High_Level_Design.pdf p.16]"
+B17,benchmark,18.09,0.737,SEKER_L15_L16_High_Level_Design.pdf p.20,SEKER_L15_L16_High_Level_Design.pdf p.20; SEKER_L15_L16_High_Level_Design.pdf p.21; SEKER_L13_L14_Use_Case_Analysis.pdf p.13,True,81,"According to the passage, Southwest Airlines cancelled 16,900 flights and was imposed a civil penalty of $140 million by the Department of Transportation. [SEKER_L15_L16_High_Level_Design.pdf p.20]
+
+[SEKER_L15_L16_High_Level_Design.pdf p.20]
+[SEKER_L15_L16_High_Level_Design.pdf p.20]"
+B18,benchmark,15.14,0.797,SEKER_L15_L16_High_Level_Design.pdf p.21,SEKER_L15_L16_High_Level_Design.pdf p.21; SEKER_L15_L16_High_Level_Design.pdf p.20; SEKER_L15_L16_High_Level_Design.pdf p.36,True,76,"The July 2024 CrowdStrike incident affected 8.5 million machines, and the faulting code was in the csagent.sys, CrowdStrike's kernel-mode Dile-system Dlter driver.
+
+[SEKER_L15_L16_High_Level_Design.pdf p.21]
+[SEKER_L15_L16_High_Level_Design.pdf p.42]"
+B19,benchmark,15.15,0.742,SEKER_L15_L16_High_Level_Design.pdf p.22,SEKER_L15_L16_High_Level_Design.pdf p.22; SEKER_L15_L16_High_Level_Design.pdf p.10; SEKER_L15_L16_High_Level_Design.pdf p.36,True,99,"The operational cost of Prime Video decreased by 90% after its monitoring service was consolidated into one process. This was achieved by replacing object storage with in-process data transfer, eliminating the orchestration limit, and reducing the number of boundaries. [SEKER_L15_L16_High_Level_Design.pdf p.22]
+
+[SEKER_L15_L16_High_Level_Design.pdf p.22]
+[SEKER_L15_L16_High_Level_Design.pdf p.22]"
+B20,benchmark,8.39,0.782,SEKER_L15_L16_High_Level_Design.pdf p.28,SEKER_L15_L16_High_Level_Design.pdf p.28; SEKER_L15_L16_High_Level_Design.pdf p.26; SEKER_L15_L16_High_Level_Design.pdf p.1,True,52,"The five headings of an architecture decision record are: 
+1. Decision 
+2. Alternatives 
+3. Consequences 
+4. Stakeholders 
+5. Status.
+
+[SEKER_L15_L16_High_Level_Design.pdf p.28]"
+OT1,off-topic,0.06,0.48,refusal,SEKER_L15_L16_High_Level_Design.pdf p.24; SEKER_L15_L16_High_Level_Design.pdf p.18; SEKER_L15_L16_High_Level_Design.pdf p.7,True,0,No material in this course covers that question.
+OT2,off-topic,7.19,0.56,refusal,SEKER_L13_L14_Use_Case_Analysis.pdf p.14; SEKER_L13_L14_Use_Case_Analysis.pdf p.12; SEKER_L15_L16_High_Level_Design.pdf p.18,True,45,"No material in this course covers that question.
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.14]
+[SEKER_L15_L16_High_Level_Design.pdf p.18]"
+OT3,off-topic,15.53,0.632,refusal,SEKER_L13_L14_Use_Case_Analysis.pdf p.24; SEKER_L15_L16_High_Level_Design.pdf p.32; SEKER_L15_L16_High_Level_Design.pdf p.19,False,156,"The TCP three-way handshake involves the client and server exchanging messages to establish a connection. The client sends a SYN (synchronize) packet to the server, which responds with a SYN-ACK (synchronize-acknowledgment) packet, and the client then sends an ACK (acknowledgment) packet to confirm the connection. [SEKER_L15_L16_High_Level_Design.pdf p.32]
+
+[SEKER_L15_L16_High_Level_Design.pdf p.19]
+
+[SEKER_L13_L14_Use_Case_Analysis.pdf p.24]
+
+Note: The provided passages do not explicitly describe the TCP three-way handshake, but they do provide general information about communication protocols and system design, which can be used to infer the process."
+OT4,off-topic,0.05,0.507,refusal,SEKER_L15_L16_High_Level_Design.pdf p.15; SEKER_L15_L16_High_Level_Design.pdf p.21; SEKER_L13_L14_Use_Case_Analysis.pdf p.27,True,0,No material in this course covers that question.
+OT5,off-topic,0.03,0.473,refusal,SEKER_L15_L16_High_Level_Design.pdf p.2; SEKER_L13_L14_Use_Case_Analysis.pdf p.21; SEKER_L13_L14_Use_Case_Analysis.pdf p.2,True,0,No material in this course covers that question.
