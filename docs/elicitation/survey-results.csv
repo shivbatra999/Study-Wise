@@ -1,0 +1,11 @@
+id,major,laptop,os,ram,storage,gpu,age,where,terminal,assistive,interview
+S01,Biomedical sciences,Windows laptop,Windows 11,32 GB or more,10 to 50 GB,Not sure,1 to 2 years,"On battery, around campus","No, never",None of these,Yes
+S02,Computer Science,Windows laptop,Windows 11,8 GB or less,More than 50 GB,No,Less than 1 year,"On battery, around campus","No, never",None of these,No
+S03,Computer Science,Windows laptop,Windows 11,18 to 24 GB,10 to 50 GB,Not sure,1 to 2 years,"Plugged in, at home","Yes, comfortably",Zoom or large text; Speech-to-text or dictation; Screen reader,Yes
+S04,Healthcare Studies,MacBook,macOS 14 (Sonoma) or later,8 GB or less,More than 50 GB,Not sure,5 years or more,"On battery, around campus","No, never",None of these,Yes
+S05,biomedical engineering,Windows laptop,Windows 11,32 GB or more,More than 50 GB,No,1 to 2 years,"On battery, around campus","No, never",Zoom or large text,No
+S06,Computer Science,Windows laptop,Windows 10,32 GB or more,More than 50 GB,Yes,3 to 4 years,"Plugged in, at home","Yes, comfortably",None of these,No
+S07,Computer Science,MacBook,macOS 14 (Sonoma) or later,8 GB or less,10 to 50 GB,No,3 to 4 years,Both about equally,"Yes, but it was difficult",None of these,No
+S08,Computer Science,Windows laptop,Windows 11,16 GB,More than 50 GB,Yes,1 to 2 years,Both about equally,"Yes, comfortably",None of these,
+S09,Computer Science,Windows laptop,Windows 11,Not sure,Not sure,Yes,1 to 2 years,Both about equally,"Yes, comfortably",None of these,No
+S10,Computer Science,MacBook,macOS 14 (Sonoma) or later,16 GB,More than 50 GB,No,Less than 1 year,Both about equally,"Yes, comfortably",None of these,Yes
