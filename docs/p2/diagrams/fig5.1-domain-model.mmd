@@ -1,0 +1,59 @@
+classDiagram
+  direction LR
+  class Course {
+    name
+    /number of materials
+  }
+  class Material {
+    name
+    type - PDF or PowerPoint
+    number of pages or slides
+    ready for questions
+  }
+  class PageOrSlide {
+    number
+  }
+  class Passage {
+    text
+  }
+  class Question {
+    text
+  }
+  class Answer {
+    text
+  }
+  class Citation {
+    material name
+    page or slide number
+  }
+  class Quiz {
+    format
+    number of questions
+  }
+  class QuizQuestion {
+    text
+    model answer
+    student answer
+  }
+  class Option {
+    text
+    is correct
+    is chosen
+  }
+  class QuizResult {
+    number correct
+    total
+  }
+  Course "1" -- "0..*" Material : contains
+  Material "1" -- "1..*" PageOrSlide : has
+  PageOrSlide "1" -- "0..*" Passage : contains
+  Question "0..*" -- "1" Course : asked in
+  Question "1" -- "0..1" Answer : answered by
+  Answer "0..1" -- "1..*" Citation : cites
+  Citation "0..*" -- "1" Passage : points to
+  Quiz "0..*" -- "1" Course : practised in
+  Quiz "0..*" -- "1..*" Material : draws from
+  Quiz "1" -- "1..20" QuizQuestion : contains
+  QuizQuestion "1" -- "0..4" Option : offers
+  QuizQuestion "0..1" -- "1" Citation : sourced by
+  Quiz "1" -- "0..1" QuizResult : scored as
